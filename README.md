@@ -37,6 +37,6 @@ La confidentialité des patients est notre priorité. Le projet respecte (ou vis
 * Contrôle d'accès basé sur les rôles (RBAC).
 
 ## 👤 Auteur
-**[Votre Nom/Pseudo]**
+**ACACHA Elie**
 * Projet initié dans le cadre d'un stage/développement personnel sur la HealthTech en Afrique.
-* LinkedIn : [Lien vers votre profil]
+* LinkedIn : www.linkedin.com/in/elie-acacha
