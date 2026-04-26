@@ -1,0 +1,82 @@
+.heroSection {
+  isolation: isolate;
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.22) 0%, transparent 45%);
+}
+
+.userCardOverlay {
+  transition: opacity 220ms ease;
+}
+
+.group:hover .userCardOverlay {
+  opacity: 0.86;
+}
+
+.overlayEmerald {
+  --tw-gradient-from: rgba(6, 78, 59, 0.82);
+}
+
+.overlayTeal {
+  --tw-gradient-from: rgba(15, 118, 110, 0.82);
+}
+
+.overlayBlue {
+  --tw-gradient-from: rgba(30, 64, 175, 0.82);
+}
+
+.roleEmerald {
+  color: #6ee7b7;
+}
+
+.roleTeal {
+  color: #5eead4;
+}
+
+.roleBlue {
+  color: #93c5fd;
+}
+
+.checkEmerald {
+  color: #10b981;
+}
+
+.checkTeal {
+  color: #14b8a6;
+}
+
+.checkBlue {
+  color: #3b82f6;
+}
+
+.buttonEmerald {
+  color: #047857;
+  background: #ecfdf5;
+}
+
+.buttonEmerald:hover {
+  background: #d1fae5;
+}
+
+.buttonTeal {
+  color: #0f766e;
+  background: #f0fdfa;
+}
+
+.buttonTeal:hover {
+  background: #ccfbf1;
+}
+
+.buttonBlue {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.buttonBlue:hover {
+  background: #dbeafe;
+}

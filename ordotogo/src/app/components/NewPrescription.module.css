@@ -1,0 +1,809 @@
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.375rem;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.backButton:hover {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.headerText {
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.subtitle {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.iconSm {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.iconMd {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.iconTiny {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.06);
+}
+
+.stepsBar {
+  display: flex;
+  align-items: center;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepBubble {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.stepCompleted,
+.stepActive {
+  background: #059669;
+  color: #fff;
+}
+
+.stepActive {
+  box-shadow: 0 0 0 4px #d1fae5;
+}
+
+.stepPending {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.stepLabel {
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stepLabelActive { color: #047857; }
+.stepLabelPending { color: #94a3b8; }
+
+.stepConnector {
+  height: 0.125rem;
+  margin: 0 0.25rem 1.25rem;
+  flex: 1;
+  border-radius: 9999px;
+}
+
+.stepConnectorDone { background: #10b981; }
+.stepConnectorPending { background: #f1f5f9; }
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.searchWrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.625rem;
+  width: 1rem;
+  height: 1rem;
+  color: #94a3b8;
+}
+
+.searchInput,
+.textField,
+.selectField,
+.textArea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.searchInput {
+  padding: 0.625rem 1rem 0.625rem 2.25rem;
+}
+
+.textField,
+.selectField {
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.textArea {
+  padding: 0.625rem 0.75rem;
+  resize: none;
+}
+
+.searchInput:focus,
+.textField:focus,
+.selectField:focus,
+.textArea:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #34d399;
+}
+
+.patientList,
+.medicationList,
+.summaryMedList,
+.stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.patientCard {
+  width: 100%;
+  text-align: left;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.patientCardIdle {
+  border-color: #f1f5f9;
+}
+
+.patientCardIdle:hover {
+  border-color: #e2e8f0;
+}
+
+.patientCardSelected {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.patientCardRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.avatar,
+.bannerAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #d1fae5;
+  color: #047857;
+}
+
+.patientCardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.patientTopLine,
+.summaryTop,
+.medicationHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.patientName,
+.medicationName,
+.bannerName,
+.summaryPatient,
+.signatureTitle,
+.signatureSuccessTitle,
+.qrSuccessTitle,
+.sendTitle {
+  margin: 0;
+}
+
+.patientName,
+.bannerName,
+.summaryPatient,
+.medicationName {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.patientId {
+  flex-shrink: 0;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.patientMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.patientMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.allergyLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+  color: #dc2626;
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.linkButton,
+.backLink,
+.primaryButton,
+.primaryButtonWide,
+.removeButton,
+.whatsappButton,
+.smsButton,
+.printButton,
+.shareButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.linkButton,
+.backLink {
+  background: transparent;
+  color: #059669;
+}
+
+.linkButton:hover,
+.backLink:hover {
+  color: #047857;
+}
+
+.primaryButton,
+.primaryButtonWide {
+  padding: 0.625rem 1.25rem;
+  background: #059669;
+  color: #fff;
+}
+
+.primaryButton:hover,
+.primaryButtonWide:hover {
+  background: #047857;
+}
+
+.primaryButton:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.selectedPatientBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.75rem;
+  background: #ecfdf5;
+}
+
+.bannerAvatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #bbf7d0;
+  color: #065f46;
+}
+
+.bannerCopy {
+  min-width: 0;
+}
+
+.bannerMeta,
+.signatureText,
+.signatureSuccessText,
+.qrSuccessText,
+.summaryLabel,
+.summaryValue,
+.summaryValueMono,
+.summaryMedMeta,
+.emptyText,
+.qrCaption {
+  margin: 0;
+}
+
+.bannerMeta {
+  font-size: 0.75rem;
+  color: #059669;
+}
+
+.bannerAllergy {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 0.75rem;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+.dropdownItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.625rem 1rem;
+  border: 0;
+  background: #fff;
+  text-align: left;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.dropdownItem:hover {
+  background: #f0fdfa;
+}
+
+.dropdownLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.dropdownName {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.dropdownForm,
+.dropdownDosage,
+.fieldLabel {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.emptyMedications,
+.signaturePrompt,
+.centeredBlock {
+  text-align: center;
+}
+
+.emptyMedications {
+  padding: 2rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.emptyIcon,
+.signatureIcon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: 0 auto 0.5rem;
+  color: #cbd5e1;
+}
+
+.emptyText {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.medicationCard {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.medicationHeader {
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.medicationTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medicationIndex {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #d1fae5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.removeButton {
+  padding: 0.25rem;
+  background: transparent;
+  color: #94a3b8;
+}
+
+.removeButton:hover {
+  color: #ef4444;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.notesBlock {
+  margin-top: 1rem;
+}
+
+.notesLabel {
+  display: block;
+  margin: 0 0 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.backLink {
+  padding: 0;
+}
+
+.summaryCard {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+.summaryTop {
+  margin-bottom: 0.75rem;
+}
+
+.summaryRight {
+  text-align: right;
+}
+
+.summaryLabel {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.summaryValue,
+.summaryPatient,
+.summaryMedName {
+  color: #1e293b;
+}
+
+.summaryValue {
+  font-size: 0.875rem;
+}
+
+.summaryValueMono {
+  font-family: Consolas, 'Courier New', monospace;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.summarySection {
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.summaryMedList {
+  gap: 0.375rem;
+}
+
+.summaryMedRow {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.summaryMedMeta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.signaturePrompt {
+  padding: 1.25rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.signatureTitle {
+  margin-bottom: 0.25rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.signatureText {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.signatureSuccess {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.75rem;
+  background: #ecfdf5;
+}
+
+.signatureSuccessIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #059669;
+}
+
+.signatureSuccessTitle {
+  color: #065f46;
+  font-weight: 500;
+}
+
+.signatureSuccessText {
+  font-size: 0.75rem;
+  color: #059669;
+}
+
+.primaryButtonWide {
+  width: 100%;
+}
+
+.qrLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.qrPreview {
+  flex-shrink: 0;
+  padding: 1rem;
+  border: 2px solid #bbf7d0;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.qrCaption {
+  margin-top: 0.5rem;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.qrActionsColumn {
+  flex: 1;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.qrSuccessBox {
+  padding: 0.75rem;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.5rem;
+  background: #ecfdf5;
+}
+
+.qrSuccessTitle {
+  margin-bottom: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #047857;
+}
+
+.qrSuccessText {
+  font-size: 0.75rem;
+  color: #059669;
+}
+
+.sendTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.shareButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.whatsappButton {
+  padding: 0.5rem 1rem;
+  background: #16a34a;
+  color: #fff;
+}
+
+.whatsappButton:hover { background: #15803d; }
+
+.smsButton {
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: #fff;
+}
+
+.smsButton:hover { background: #1d4ed8; }
+
+.printButton {
+  padding: 0.5rem 1rem;
+  background: #334155;
+  color: #fff;
+}
+
+.printButton:hover { background: #1e293b; }
+
+.shareButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+}
+
+.shareButton:hover { background: #f8fafc; }
+
+.qrFrame {
+  width: 100%;
+  height: 100%;
+  padding: 0.375rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+
+.qrGrid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1px;
+}
+
+.qrSize120 {
+  width: 120px;
+  height: 120px;
+}
+
+.qrSize140 {
+  width: 140px;
+  height: 140px;
+}
+
+.qrGrid15 {
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.qrFilled { background: #0f172a; }
+.qrEmpty { background: #fff; }
+
+@media (min-width: 640px) {
+  .formGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .qrLayout {
+    flex-direction: row;
+  }
+}

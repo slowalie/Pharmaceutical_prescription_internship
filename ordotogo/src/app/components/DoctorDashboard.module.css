@@ -1,0 +1,512 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.subtitle {
+  margin: 0.125rem 0 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1rem;
+  background: #059669;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.primaryButton:hover {
+  background: #047857;
+}
+
+.iconSm {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.iconTiny {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.statCard,
+.panel,
+.panelWide,
+.tableCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.06);
+}
+
+.statCard {
+  padding: 1rem;
+}
+
+.statIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.statIconEmerald { background: #d1fae5; }
+.statIconBlue { background: #dbeafe; }
+.statIconTeal { background: #ccfbf1; }
+.statIconAmber { background: #fef3c7; }
+
+.statIconFgEmerald { color: #059669; }
+.statIconFgBlue { color: #2563eb; }
+.statIconFgTeal { color: #0d9488; }
+.statIconFgAmber { color: #d97706; }
+
+.statValue {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.statLabel {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #64748b;
+}
+
+.statDelta {
+  margin: 0.375rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #059669;
+}
+
+.chartGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panelWide,
+.panel {
+  padding: 1.25rem;
+}
+
+.panelWide {
+  min-width: 0;
+}
+
+.panelHeader,
+.tableToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.trendMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.trendText {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #059669;
+  font-weight: 500;
+}
+
+.topMedList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.topMedItem {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.topMedHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topMedName {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #334155;
+  font-size: 0.75rem;
+}
+
+.topMedCount {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.progressTrack {
+  height: 0.375rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: #10b981;
+}
+
+.progress85 { width: 85%; }
+.progress72 { width: 72%; }
+.progress55 { width: 55%; }
+.progress42 { width: 42%; }
+.progress34 { width: 34%; }
+
+.tableCard {
+  overflow: hidden;
+}
+
+.tableToolbar {
+  padding: 1.25rem 1.25rem 0;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchWrap {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.625rem;
+  top: 0.5rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #94a3b8;
+}
+
+.searchInput {
+  width: 10rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem 0.375rem 2rem;
+  font-size: 0.75rem;
+  outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.searchInput:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #34d399;
+}
+
+.filterButton,
+.moreButton,
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.filterButton {
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.filterButton:hover,
+.viewAllButton:hover,
+.moreButton:hover {
+  background: #f8fafc;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeaderRow {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.thFirst,
+.th,
+.thSpacer,
+.td,
+.tdFirst,
+.tdActions {
+  padding: 0.75rem 0.75rem;
+  text-align: left;
+}
+
+.thFirst {
+  padding-left: 1.25rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.th {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.thSpacer {
+  width: 2rem;
+}
+
+.row {
+  border-bottom: 1px solid #f8fafc;
+  transition: background-color 200ms ease;
+}
+
+.row:hover {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.tdFirst {
+  padding-left: 1.25rem;
+}
+
+.rxIdWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.alertIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.rxId {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.patientCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.patientAvatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d1fae5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.patientName {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.patientAge {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+}
+
+.dateCell {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.statusActive {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.statusDelivered {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.statusExpired {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.statusDotActive,
+.statusDotDelivered,
+.statusDotExpired {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+}
+
+.statusDotActive { background: #10b981; }
+.statusDotDelivered { background: #94a3b8; }
+.statusDotExpired { background: #f87171; }
+
+.tdActions {
+  padding-right: 1.25rem;
+}
+
+.moreButton {
+  padding: 0.25rem;
+  color: #94a3b8;
+  border-color: transparent;
+}
+
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid #f8fafc;
+}
+
+.footerText {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.viewAllButton {
+  border: 0;
+  padding: 0;
+  color: #059669;
+  font-size: 0.75rem;
+}
+
+.hideSm,
+.hideMd {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hideSm {
+    display: table-cell;
+  }
+}
+
+@media (min-width: 768px) {
+  .hideMd {
+    display: table-cell;
+  }
+}
+
+@media (min-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .chartGrid {
+    grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+  }
+
+  .header {
+    align-items: center;
+  }
+}

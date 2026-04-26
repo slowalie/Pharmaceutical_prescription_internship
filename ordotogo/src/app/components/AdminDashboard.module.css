@@ -1,0 +1,466 @@
+.page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.375rem;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.backButton:hover {
+  background: #f8fafc;
+  color: #475569;
+}
+
+.headerText {
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.subtitle {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.iconSm {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.iconMd {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  align-self: flex-start;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #d1fae5;
+  color: #047857;
+  font-size: 0.875rem;
+}
+
+.liveDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #10b981;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.statCard,
+.panel,
+.chartPanel,
+.chartPanelWide,
+.securityCard,
+.auditCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.06);
+}
+
+.statCard {
+  padding: 1rem;
+}
+
+.statIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.statIconEmerald { background: #d1fae5; }
+.statIconTeal { background: #ccfbf1; }
+.statIconBlue { background: #dbeafe; }
+.statIconRed { background: #fee2e2; }
+
+.statIconFgEmerald { color: #059669; }
+.statIconFgTeal { color: #0d9488; }
+.statIconFgBlue { color: #2563eb; }
+.statIconFgRed { color: #dc2626; }
+
+.statValue {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.statLabel {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.statSub {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.panel,
+.chartPanel,
+.chartPanelWide,
+.securityCard {
+  padding: 1.25rem;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.infraGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.infraCard {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+.infraTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.infraLabel {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.infraStatus {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: #d1fae5;
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.infraTrack {
+  height: 0.375rem;
+  margin-bottom: 0.375rem;
+  border-radius: 9999px;
+  background: #bbf7d0;
+  overflow: hidden;
+}
+
+.infraFill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #10b981;
+}
+
+.infraDetail {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.chartGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.chartPanelWide {
+  min-width: 0;
+}
+
+.chartLegend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.legendSwatchEmerald,
+.legendSwatchViolet {
+  width: 0.75rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+}
+
+.legendSwatchEmerald { background: #10b981; }
+.legendSwatchViolet { background: #8b5cf6; }
+
+.regionList {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.regionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+
+.regionNameWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+}
+
+.regionSwatch {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 0.125rem;
+}
+
+.regionSwatchLome { background: #10b981; }
+.regionSwatchSokode { background: #0d9488; }
+.regionSwatchKpalime { background: #0ea5e9; }
+.regionSwatchAtakpame { background: #8b5cf6; }
+.regionSwatchAutres { background: #94a3b8; }
+
+.regionValue {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.securityGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.securityIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.securityIconViolet { background: #ede9fe; }
+.securityIconEmerald { background: #d1fae5; }
+.securityIconBlue { background: #dbeafe; }
+
+.securityIconFgViolet { color: #7c3aed; }
+.securityIconFgEmerald { color: #059669; }
+.securityIconFgBlue { color: #2563eb; }
+
+.securityTitle {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.securityDetail {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.auditCard {
+  overflow: hidden;
+}
+
+.auditHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.liveStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #059669;
+  font-size: 0.75rem;
+}
+
+.auditList {
+  display: grid;
+}
+
+.auditRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 200ms ease;
+}
+
+.auditRow:hover {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.auditRowFraud {
+  background: rgba(254, 242, 242, 0.4);
+}
+
+.auditTime {
+  width: 3.5rem;
+  flex-shrink: 0;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.auditBadge {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.eventDelivery { background: #d1fae5; color: #047857; }
+.eventScan { background: #ccfbf1; color: #0f766e; }
+.eventSystem { background: #dbeafe; color: #1d4ed8; }
+.eventSignature { background: #ede9fe; color: #7c3aed; }
+.eventCreate { background: #f1f5f9; color: #334155; }
+.eventAuth { background: #cffafe; color: #0e7490; }
+.eventFraud { background: #fee2e2; color: #b91c1c; }
+.eventAdmin { background: #ffedd5; color: #c2410c; }
+
+.auditCopy {
+  flex: 1;
+  min-width: 0;
+}
+
+.auditAction {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.auditActionFraud {
+  font-weight: 500;
+  color: #b91c1c;
+}
+
+.auditMeta {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.auditFooter {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid #f8fafc;
+}
+
+.exportButton {
+  border: 0;
+  background: transparent;
+  color: #7c3aed;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .securityGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .infraGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .chartGrid {
+    grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+  }
+}
