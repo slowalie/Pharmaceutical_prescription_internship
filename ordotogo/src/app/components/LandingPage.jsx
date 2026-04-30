@@ -51,7 +51,7 @@ export default function LandingPage() {
             <a href="#fonctionnalites" className="hover:text-emerald-600 transition-colors">Fonctionnalités</a>
             <a href="#utilisateurs" className="hover:text-emerald-600 transition-colors">Utilisateurs</a>
             <a href="#securite" className="hover:text-emerald-600 transition-colors">Sécurité</a>
-            <a href="#planning" className="hover:text-emerald-600 transition-colors">Planning</a>
+            
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => navigate('/auth')} className="text-sm text-slate-600 hover:text-emerald-600 transition-colors hidden sm:block">
